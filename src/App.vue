@@ -1,22 +1,9 @@
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 
 <template>
-    <RouterLink to="/">Home|</RouterLink>
-    <RouterLink to="/Snake">Snake|</RouterLink>
+  <RouterLink to="/">Home|</RouterLink>
+  <RouterLink to="/Snake">Snake|</RouterLink>
   <router-view></router-view>
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
+<style scoped></style>
