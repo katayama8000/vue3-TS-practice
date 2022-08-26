@@ -22,6 +22,7 @@ const search = async () => {
     <li v-for="item in music">
       <h2>{{ item.trackName }}</h2>
       <img :src="item.artworkUrl100" />
+      <v-btn>button</v-btn>
     </li>
   </ul>
 </template>

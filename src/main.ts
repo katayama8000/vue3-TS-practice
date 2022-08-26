@@ -1,7 +1,10 @@
-import { createApp } from "vue";
-import "./style.css";
-import "./index.css";
-import App from "./App.vue";
-import router from "./router/router"; // 追記
+import { createApp } from 'vue'
+import App from './App.vue'
+import vuetify from './plugins/vuetify'
+import { loadFonts } from './plugins/webfontloader'
 
-createApp(App).use(router).mount("#app");
+loadFonts()
+
+createApp(App)
+  .use(vuetify)
+  .mount('#app')
