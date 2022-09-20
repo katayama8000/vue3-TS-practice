@@ -1,6 +1,7 @@
 ## Stack
 - Vue 3
 - VueRouter
+- Vuex ([document](https://vuex.vuejs.org/ja/))
 - TypeScript
 - Vite
 
