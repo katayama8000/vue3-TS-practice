@@ -24,5 +24,4 @@ const search = async () => {
       <img :src="item.artworkUrl100" />
     </li>
   </ul>
-  <button>button</button>
 </template>
