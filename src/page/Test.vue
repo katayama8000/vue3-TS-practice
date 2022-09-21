@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { computed } from "@vue/reactivity";
 import { useStore } from "vuex";
-const store = useStore();
+import { key } from "../store";
+const store = useStore(key);
 
 //const count = store.state.count;
 const { count, arrayName } = useStore().state;
@@ -23,22 +24,22 @@ const addName = (): void => {
 
 //storeの更新を検知する
 const detectedCount = computed<number>(() => {
-  return useStore().state.count;
+  return store.state.count;
 });
 
 //storeの更新を検知する
 const detectedArrayName = computed<string[]>(() => {
-  return useStore().state.arrayName;
+  return store.state.arrayName;
 });
 
 //leftItems
-const leftItems = computed<number>(() => {
-  return useStore().state.leftItems;
+const leftItems = computed<string[]>(() => {
+  return store.state.leftItems;
 });
 
 //rightItems
-const rightItems = computed<number>(() => {
-  return useStore().state.rightItems;
+const rightItems = computed<string[]>(() => {
+  return store.state.rightItems;
 });
 
 //moveLeft

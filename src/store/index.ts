@@ -1,6 +1,18 @@
-import { createStore } from "vuex";
+// store.ts
+import { InjectionKey } from "vue";
+import { createStore, Store } from "vuex";
 
-export default createStore({
+export interface State {
+  count: number;
+  arrayName: string[];
+  leftItems: string[];
+  rightItems: string[];
+}
+
+// インジェクションキーを定義します
+export const key: InjectionKey<Store<State>> = Symbol();
+
+export const store = createStore<State>({
   state: {
     count: 0,
     arrayName: ["tom", "jerry", "jack"],
