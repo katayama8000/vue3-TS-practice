@@ -40,6 +40,7 @@ export default createStore({
     moveLeftToRight(state) {
       if (state.leftItems.length === 0) {
         alert("左側にアイテムがありません");
+        return;
       }
       const item: string = state.leftItems.slice(-1)[0];
       state.rightItems = [...state.rightItems, item];
@@ -49,6 +50,7 @@ export default createStore({
     moveRightToLeft(state) {
       if (state.rightItems.length === 0) {
         alert("右のリストに要素がありません");
+        return;
       }
       const item: string = state.rightItems.slice(-1)[0];
       state.leftItems = [...state.leftItems, item];
