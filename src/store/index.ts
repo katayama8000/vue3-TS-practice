@@ -7,12 +7,7 @@ export default createStore({
     leftItems: ["apple", "banana", "orange"],
     rightItems: ["grape", "pear", "watermelon"],
   },
-  getters: {
-    //count
-    //count: (state) => state.count,
-    //arrayName
-    //arrayName: (state) => state.arrayName,
-  },
+  getters: {},
   mutations: {
     increment(state, number) {
       state.count += number;
@@ -24,7 +19,6 @@ export default createStore({
     },
     addName(state, name) {
       state.arrayName.push(name);
-      //[...state.arrayName, name];
       console.log(state.arrayName);
     },
     //leftItemsの最後の要素をrightItemsに移動
