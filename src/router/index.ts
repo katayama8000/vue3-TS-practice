@@ -4,6 +4,7 @@ import Home from "../page/Home.vue";
 import About from "../page/About.vue";
 import Test from "../page/Test.vue";
 import Slot from "../page/Slot.vue";
+import Bind from "../page/Bind.vue";
 
 const routes = [
   {
@@ -25,6 +26,11 @@ const routes = [
     path: "/slot",
     name: "Slot",
     component: Slot,
+  },
+  {
+    path: "/bind",
+    name: "Bind",
+    component: Bind,
   },
 ];
 

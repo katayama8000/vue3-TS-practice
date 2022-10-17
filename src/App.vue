@@ -1,11 +1,38 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const LINKS = [
+  {
+    name: "Home",
+    path: "/",
+  },
+  {
+    name: "About",
+    path: "/about",
+  },
+  {
+    name: "Test",
+    path: "/test",
+  },
+  {
+    name: "Slot",
+    path: "/slot",
+  },
+  {
+    name: "Bind",
+    path: "/bind",
+  },
+];
+</script>
 
 <template>
-  <RouterLink to="/">Home|</RouterLink>
-  <RouterLink to="/About">About|</RouterLink>
-  <RouterLink to="/test">Test|</RouterLink>
-  <RouterLink to="/slot">Slot|</RouterLink>
-  <h1 class="text-3xl font-bold underline text-emerald-600">Hello world!</h1>
+  <div class="max-w-6xl m-auto mt-10">
+    <h1 class="text-bold text-3xl p-3">practice</h1>
+    <hr />
+    <ul class="flex">
+      <li v-for="link in LINKS" :key="link.name" class="px-3">
+        <RouterLink :to="link.path">{{ link.name }}</RouterLink>
+      </li>
+    </ul>
+  </div>
   <router-view></router-view>
 </template>
 
