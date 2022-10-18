@@ -16,7 +16,7 @@ const search = async () => {
 </script>
 
 <template>
-  <input type="text" v-model="term" />
+  <input type="text" v-model="term" class="bg-red-200" />
   <input class="submit" type="submit" value="Search" @click="search" />
   <ul>
     <li v-for="item in music">

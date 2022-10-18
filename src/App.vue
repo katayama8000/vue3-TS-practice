@@ -8,10 +8,10 @@ const LINKS = [
     name: "About",
     path: "/about",
   },
-  {
-    name: "Test",
-    path: "/test",
-  },
+  // {
+  //   name: "Test",
+  //   path: "/test",
+  // },
   {
     name: "Slot",
     path: "/slot",
@@ -32,8 +32,8 @@ const LINKS = [
         <RouterLink :to="link.path">{{ link.name }}</RouterLink>
       </li>
     </ul>
+    <router-view></router-view>
   </div>
-  <router-view></router-view>
 </template>
 
 <style scoped></style>
