@@ -3,8 +3,7 @@ const LINKS = [
   {
     name: "Home",
     path: "/",
-  },
-  {
+  },{
     name: "About",
     path: "/about",
   },
@@ -15,13 +14,15 @@ const LINKS = [
   {
     name: "Slot",
     path: "/slot",
-  },
-  {
+  },{
     name: "Bind",
     path: "/bind",
   }, {
-    name: "Sample",
-    path: "/sample",
+    name: "Sample1",
+    path: "/sample1",
+  }, {
+    name: "Sample2",
+    path: "/sample2",
   }
 ];
 </script>
