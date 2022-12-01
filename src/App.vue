@@ -19,7 +19,10 @@ const LINKS = [
   {
     name: "Bind",
     path: "/bind",
-  },
+  }, {
+    name: "Sample",
+    path: "/sample",
+  }
 ];
 </script>
 

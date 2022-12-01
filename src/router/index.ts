@@ -32,6 +32,11 @@ const routes = [
     name: "Bind",
     component: Bind,
   },
+  {
+    path: "/sample",
+    name: "Sample",
+    component: () => import("../page/Sample.vue"),
+  },
 ];
 
 const router = createRouter({
