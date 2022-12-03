@@ -33,14 +33,19 @@ const routes = [
     component: Bind,
   },
   {
-    path: "/sample",
-    name: "Sample",
+    path: "/sample1",
+    name: "Sample1",
     component: () => import("../page/Sample1.vue"),
   },
   {
     path: "/sample2",
     name: "Sample2",
     component: () => import("../page/Sample2.vue"),
+  },
+  {
+    path: "/sample3",
+    name: "Sample3",
+    component: () => import("../page/Sample3.vue"),
   },
 ];
 

@@ -3,7 +3,8 @@ const LINKS = [
   {
     name: "Home",
     path: "/",
-  },{
+  },
+  {
     name: "About",
     path: "/about",
   },
@@ -14,16 +15,23 @@ const LINKS = [
   {
     name: "Slot",
     path: "/slot",
-  },{
+  },
+  {
     name: "Bind",
     path: "/bind",
-  }, {
+  },
+  {
     name: "Sample1",
     path: "/sample1",
-  }, {
+  },
+  {
     name: "Sample2",
     path: "/sample2",
-  }
+  },
+  {
+    name: "Sample3",
+    path: "/sample3",
+  },
 ];
 </script>
 
@@ -36,6 +44,8 @@ const LINKS = [
         <RouterLink :to="link.path">{{ link.name }}</RouterLink>
       </li>
     </ul>
+    <br />
+    <hr />
     <router-view></router-view>
   </div>
 </template>
