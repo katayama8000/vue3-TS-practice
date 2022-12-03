@@ -1,8 +1,10 @@
 // store.ts
 import { InjectionKey } from "vue";
 import { createStore, Store } from "vuex";
+import { fruitModule } from "./module/fruit";
 
-export interface State {
+export interface StateType {
+  [x: string]: any;
   count: number;
   arrayName: string[];
   leftItems: string[];
@@ -10,16 +12,20 @@ export interface State {
 }
 
 // インジェクションキーを定義します
-export const key: InjectionKey<Store<State>> = Symbol();
+export const key: InjectionKey<Store<StateType>> = Symbol();
 
-export const store = createStore<State>({
+export const store = createStore<StateType>({
   state: {
     count: 0,
     arrayName: ["tom", "jerry", "jack"],
     leftItems: ["apple", "banana", "orange"],
     rightItems: ["grape", "pear", "watermelon"],
   },
-  getters: {},
+  getters: {
+    getArrayName(state) {
+      return state.arrayName;
+    },
+  },
   mutations: {
     increment(state, number) {
       state.count += number;
@@ -65,5 +71,7 @@ export const store = createStore<State>({
     },
   },
   actions: {},
-  modules: {},
+  modules: {
+    fruitModule,
+  },
 });
