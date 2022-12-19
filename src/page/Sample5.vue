@@ -6,18 +6,43 @@
     <button @click="reset()">reset</button>
     <p>{{ count }}</p>
     <p>{{ doubleCount }}</p>
+    <input type="text" @change="showChange($event)" />
+    <div>{{ num }}</div>
+    <button @click="add">add</button>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, ref, watch } from "vue";
 export default defineComponent({
   data() {
     return {
       count: 0,
     };
   },
+
+  setup() {
+    const num = ref(0);
+
+    watch(
+      () => num.value,
+      (newVal, oldVal) => {
+        console.log("newVal", newVal);
+        console.log("oldVal", oldVal);
+      }
+    );
+
+    return { num };
+  },
   methods: {
+    add() {
+      this.num++;
+    },
+    showChange(e: Event) {
+      if (e.target instanceof HTMLInputElement) console.log(e.target!.value);
+      console.log("change");
+    },
+
     increase() {
       this.count++;
     },

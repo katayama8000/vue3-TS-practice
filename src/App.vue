@@ -40,6 +40,10 @@ const LINKS = [
     name: "Sample5",
     path: "/sample5",
   },
+  {
+    name: "Sample6",
+    path: "/sample6",
+  },
 ];
 </script>
 
