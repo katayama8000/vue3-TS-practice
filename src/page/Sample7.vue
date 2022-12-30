@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 const isLogin = ref<boolean>(false);
+const loginword = `ログイン中`;
 </script>
 
 <template>
@@ -8,6 +9,6 @@ const isLogin = ref<boolean>(false);
     {{ isLogin ? "ログアウト" : "ログイン" }}
   </button>
   <hr />
-  <p v-if="isLogin">ログイン中</p>
-  <p v-show="isLogin">ログイン中</p>
+  {{ isLogin ? loginword : null }}
+  <p v-bind:style="{ display: isLogin ? '' : 'none' }">ログイン中</p>
 </template>
